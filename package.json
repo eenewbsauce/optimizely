@@ -1,0 +1,19 @@
+{
+  "name": "optimizely",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eenewbsauce",
+  "license": "ISC",
+  "devDependencies": {
+    "request-promise": "^4.1.1"
+  },
+  "dependencies": {
+    "request": "^2.76.0",
+    "request-promise": "^4.1.1"
+  }
+}
