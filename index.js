@@ -1,18 +1,14 @@
-const request     = require('request-promise');
 const optlyLib    = require('./lib');
-const auth        = optlyLib.authentication;
-let projects;
-let experiments;
+let optly;
 
-auth.getAccessToken()
-    .then(res => {
-        console.log('res from at: ' + JSON.stringify(res, null, 4));
+optlyLib.create()
+    .then(optlyInstance => {
+        optly = optlyInstance;
     })
-    .catch(() => auth.getRefreshToken()
-        .then(res => {
-            console.log('res from rt: ' + JSON.stringify(res, null, 4));
-        })
-    );
+    .then(() => optly.projects.list())
+    .then(projects => console.log(JSON.stringify(projects, null, 4)));
+
+
 
 
 
