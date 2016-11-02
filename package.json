@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
+    "debug": "echo \"** Make sure you have node-inspector install globally **\" && node-debug index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "eenewbsauce",
@@ -13,6 +14,7 @@
     "request-promise": "^4.1.1"
   },
   "dependencies": {
+    "colors": "^1.1.2",
     "express": "^4.14.0",
     "ramda": "^0.22.1",
     "redis": "^2.6.3",
